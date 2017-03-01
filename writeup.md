@@ -22,7 +22,7 @@ The goal is to identify the lines which are part of the same lane line and merge
 
 The trickiest part is to choose/discard lines to be merged for the same lane line. Eliminating the noise is crucial.
 
-I noticed that as lane lines go from left to right, their slope (considering the image x, y with origin at top left), their slopes increase, going from negative to infinity in the center and then positive towards the right, similarly the y-intercept starts from some constant C for a horizontal line on the left, increases to infinity in the center and then from -infinity, increase back to C while going right. 
+I noticed that as lane lines go from left to right, their slope (considering the image x, y with origin at top left), their slopes first decrease, going from zero (for a horizontal) to negative to -infinity in the center and then +infinity to positive to zero (for a horizontal) towards the right, similarly the y-intercept starts from some constant C for a horizontal line on the left, increases to infinity in the center and then from -infinity, increase back to C while going right. 
 
 In case of lines which curve towards the top, the line may be approximated to smaller lines located inside horizontal brackets which divide the screen and they iterate over the initial slope and intercepts in a discernable pattern depending on curving towards right or left.
 
